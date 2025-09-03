@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LightboxGallery from "@/app/(site)/components/LightboxGallery";
 
 export const metadata = {
   title: "Projekt",
@@ -7,10 +8,9 @@ export const metadata = {
 
 export default function ProjectsPage() {
   const images = [
-    { src: "/globe.svg", w: 800, h: 600, alt: "Fasadmålning" },
-    { src: "/file.svg", w: 800, h: 600, alt: "Invändig målning" },
-    { src: "/window.svg", w: 800, h: 600, alt: "Tapetsering" },
-    { src: "/next.svg", w: 800, h: 600, alt: "Snickerimålning" },
+    { src: "/hollviken.PNG", w: 800, h: 600, alt: "Fasadmålning" },
+    { src: "/hollviken2.PNG", w: 800, h: 600, alt: "Invändig målning" },
+    { src: "/hollviken3.PNG", w: 800, h: 600, alt: "Tapetsering" },
   ];
   return (
     <main className="container py-16">
@@ -18,12 +18,8 @@ export default function ProjectsPage() {
       <p className="mt-3 text-white/70 max-w-2xl">
         Här visar vi ett urval av våra arbeten. Kontakta oss för fler referenser.
       </p>
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {images.map((img) => (
-          <div key={img.alt} className="relative aspect-[4/3] overflow-hidden rounded-xl ring-1 ring-white/10 bg-[--muted]">
-            <Image src={img.src} alt={img.alt} fill className="object-contain p-10 opacity-80" />
-          </div>
-        ))}
+      <div className="mt-10">
+        <LightboxGallery images={images} />
       </div>
     </main>
   );

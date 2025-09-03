@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import LightboxGallery from "@/app/(site)/components/LightboxGallery";
 
 function Section({
   id,
@@ -105,12 +106,14 @@ export default function Home() {
           </div>
           <Link href="/projekt" className="btn-outline whitespace-nowrap">Se alla</Link>
         </div>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {["/hollviken.PNG", "/hollviken2.PNG", "/hollviken3.PNG"].map((src, i) => (
-            <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-xl ring-1 ring-white/10 bg-[--muted]">
-              <Image src={src} alt={`Projekt ${i + 1}`} fill className="object-contain p-10 opacity-80 group-hover:opacity-100 transition" />
-            </div>
-          ))}
+        <div className="mt-8">
+          <LightboxGallery
+            images={[
+              { src: "/hollviken.PNG", w: 800, h: 600, alt: "Fasadmålning" },
+              { src: "/hollviken2.PNG", w: 800, h: 600, alt: "Invändig målning" },
+              { src: "/hollviken3.PNG", w: 800, h: 600, alt: "Tapetsering" },
+            ]}
+          />
         </div>
       </Section>
 

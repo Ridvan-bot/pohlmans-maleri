@@ -13,7 +13,7 @@ export default function Footer() {
         <div>
           <div className="font-semibold">Kontakt</div>
           <ul className="mt-3 space-y-2 text-white/70 text-sm">
-            <li>Tel: 070-000 00 00</li>
+            <li>Tel: 073-512 99 18</li>
             <li>E-post: info@pohlmansmaleri.se</li>
             <li>Skåne</li>
           </ul>
@@ -29,15 +29,14 @@ export default function Footer() {
         <div>
           <div className="font-semibold">Följ oss</div>
           <ul className="mt-3 space-y-2 text-white/70 text-sm">
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Facebook</a></li>
+            <li><a href="https://www.instagram.com/pohlmans_maleri?igsh=MWd5c2NpdjJ5OTdwZw==">Instagram</a></li>
           </ul>
         </div>
       </div>
       <div className="border-t border-white/10">
         <div className="container py-6 text-xs text-white/60 flex items-center justify-between">
           <div>© {new Date().getFullYear()} Pohlmans Måleri</div>
-          <div>Webb av Pohlman Protean AB</div>
+          <a href="https://pohlmanprotean.se" target="_blank" rel="noopener noreferrer">Webb av Pohlman Protean AB</a>
         </div>
       </div>
     </footer>
