@@ -48,10 +48,6 @@ export default function Home() {
               <div>Trygghetsgaranti</div>
             </div>
           </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden bg-[--muted] ">
-
-            <Image src="/pohlmansmaleriloga.png" alt="Måleri" fill className="object-contain p-10 opacity-90" />
-          </div>
         </Section>
       </div>
 
