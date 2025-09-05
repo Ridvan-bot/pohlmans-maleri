@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const links = [
   { href: "/", label: "Hem" },
@@ -20,6 +21,7 @@ export default function Navbar() {
         <Link href="/" className="font-extrabold tracking-tight text-xl gradient-text">
           <span className="text-gradient">Pohlmans</span> <span className="text-gradient">Måleri</span>
         </Link>
+        <Image src="/pohlmansmaleriloga.png" alt="Måleri" width={100} height={100} />
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {links.map((l) => (
             <Link
