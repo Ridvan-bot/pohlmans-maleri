@@ -72,7 +72,7 @@ export default function Home() {
           ].map((s) => (
             <div
               key={s.title}
-              className="rounded-xl border border-white/10 bg-[--muted] p-6 hover:border-white/20 transition"
+              className="rounded-xl border border-white/10 bg-[--muted] p-6 hover:border-white/20 transition shadow-[0_10px_30px_rgba(244,196,48,0.15)] hover:shadow-[0_22px_70px_rgba(244,196,48,0.26)]"
             >
               <h3 className="text-xl font-semibold">{s.title}</h3>
               <p className="mt-2 text-white/70">{s.desc}</p>
