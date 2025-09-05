@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/pohlmansmaleriloga.png",
+    shortcut: "/pohlmansmaleriloga.png",
+    apple: "/pohlmansmaleriloga.png",
+  },
   openGraph: {
     title: "Pohlmans Måleri",
     description:
