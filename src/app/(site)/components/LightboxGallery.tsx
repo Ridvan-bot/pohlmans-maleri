@@ -47,7 +47,7 @@ export default function LightboxGallery({ images, gridClassName }: LightboxGalle
             key={img.src + i}
             type="button"
             onClick={() => { setIndex(i); setIsOpen(true); }}
-            className="group relative aspect-[4/3] overflow-hidden rounded-xl ring-1 ring-white/10 bg-[--muted] focus:outline-none focus-visible:ring-2 focus-visible:ring-[--brand-600] gallery-tile"
+            className="group relative aspect-[4/3] overflow-hidden rounded-xl ring-1 ring-white/10 bg-[--muted] focus:outline-none focus-visible:ring-2 focus-visible:ring-[--brand-600] gallery-tile shadow-[0_10px_30px_rgba(244,196,48,0.15)] hover:shadow-[0_22px_70px_rgba(244,196,48,0.26)]"
             aria-label={`Öppna ${img.alt}`}
           >
             <Image
