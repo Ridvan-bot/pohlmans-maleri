@@ -1,4 +1,3 @@
-import Image from "next/image";
 import LightboxGallery from "@/app/(site)/components/LightboxGallery";
 
 export const metadata = {
