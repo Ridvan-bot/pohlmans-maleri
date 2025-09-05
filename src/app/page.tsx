@@ -23,10 +23,15 @@ export default function Home() {
     <div className="font-sans">
       {/* Hero */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(1000px_500px_at_50%_-10%,rgba(212,160,23,.15),transparent)]" />
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -inset-[10%] opacity-30">
+            <div className="absolute inset-0 bg-[conic-gradient(from_180deg_at_50%_50%,rgba(244, 195, 48, 0.79),transparent,rgba(244, 195, 48, 0.74))] animate-[panX_6s_linear_infinite_alternate]" style={{ maskImage: "radial-gradient(60%_60%_at_50%_50%,#000_40%,transparent)" }} />
+          </div>
+          <div className="absolute inset-0 bg-[radial-gradient(1000px_500px_at_50%_-10%,rgba(212,160,23,.15),transparent)]" />
+        </div>
         <Section className="relative z-10 grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight gradient-text">
               Pohlmans Måleri
             </h1>
             <p className="mt-5 text-white/80 text-lg leading-relaxed max-w-xl">
@@ -43,8 +48,9 @@ export default function Home() {
               <div>Trygghetsgaranti</div>
             </div>
           </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden bg-[--muted]">
-            <Image src="/pohlmansmaleriloga.png" alt="Måleri" fill className="object-contain p-10 opacity-80" />
+          <div className="relative aspect-[4/3] w-full overflow-hidden bg-[--muted] ">
+
+            <Image src="/pohlmansmaleriloga.png" alt="Måleri" fill className="object-contain p-10 opacity-90" />
           </div>
         </Section>
       </div>
@@ -77,8 +83,10 @@ export default function Home() {
 
       {/* Om oss */}
       <Section id="om-oss" className="grid gap-8 lg:grid-cols-2 lg:items-center">
-        <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden ring-1 ring-white/10 bg-[--muted]">
-          <Image src="/paint-roller.svg" alt="Om oss" fill className="object-contain p-10 opacity-80" />
+        <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden -[--muted]">
+          <div className="absolute inset-0 animate-[floatSlow_6s_ease-in-out_infinite]">
+            <Image src="/paint-roller.svg" alt="Om oss" fill className="object-contain p-10 opacity-85" />
+          </div>
         </div>
         <div>
           <h2 className="text-3xl sm:text-4xl font-bold">Om oss</h2>
@@ -119,7 +127,7 @@ export default function Home() {
 
       {/* CTA */}
       <Section className="text-center">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-[--muted] px-8 py-12">
+        <div className="mx-auto max-w-3xl bg-[--muted] px-8 py-12">
           <h3 className="text-2xl sm:text-3xl font-bold">Redo att förnya ditt hem eller kontor?</h3>
           <p className="mt-3 text-white/70">
             Kontakta oss för en kostnadsfri offert och rådgivning.

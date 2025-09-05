@@ -13,17 +13,20 @@ const links = [
 export default function Navbar() {
   const pathname = usePathname();
   return (
-    <header className="sticky top-0 z-50 bg-black/70 backdrop-blur supports-[backdrop-filter]:bg-black/60 border-b border-white/10">
+    <header className="sticky top-0 z-50 border-b border-white/10">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-black/60 backdrop-blur-md supports-[backdrop-filter]:bg-black/50" />
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="font-extrabold tracking-tight text-xl">
-          <span className="text-[--brand-600]">Pohlmans</span> Måleri
+        <Link href="/" className="font-extrabold tracking-tight text-xl gradient-text">
+          <span className="text-gradient">Pohlmans</span> <span className="text-gradient">Måleri</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className={`hover:text-white ${pathname === l.href ? "text-white" : "text-white/70"}`}
+              className={`nav-link ${pathname === l.href ? "text-white" : "text-white/70 hover:text-white"}`}
+              data-active={pathname === l.href}
             >
               {l.label}
             </Link>

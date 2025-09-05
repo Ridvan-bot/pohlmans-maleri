@@ -47,7 +47,7 @@ export default function LightboxGallery({ images, gridClassName }: LightboxGalle
             key={img.src + i}
             type="button"
             onClick={() => { setIndex(i); setIsOpen(true); }}
-            className="group relative aspect-[4/3] overflow-hidden rounded-xl ring-1 ring-white/10 bg-[--muted] focus:outline-none focus-visible:ring-2 focus-visible:ring-[--brand-600]"
+            className="group relative aspect-[4/3] overflow-hidden rounded-xl ring-1 ring-white/10 bg-[--muted] focus:outline-none focus-visible:ring-2 focus-visible:ring-[--brand-600] gallery-tile"
             aria-label={`Öppna ${img.alt}`}
           >
             <Image
@@ -55,8 +55,9 @@ export default function LightboxGallery({ images, gridClassName }: LightboxGalle
               alt={img.alt}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-contain p-10 opacity-80 group-hover:opacity-100 transition"
+              className="object-contain p-10 opacity-80 group-hover:opacity-100 transition duration-300"
             />
+            <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
           </button>
         ))}
       </div>
