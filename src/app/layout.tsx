@@ -38,9 +38,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sv">
-      <body className={`${manrope.variable} antialiased bg-background text-foreground`}>
+      <body className={`${manrope.variable} antialiased bg-background text-foreground min-h-screen flex flex-col`}>
         <Navbar />
-        {children}
+        <main className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
